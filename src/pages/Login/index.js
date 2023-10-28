@@ -13,8 +13,8 @@ import { SessionContext } from "../../context/session/SessionContext";
 // };
 
 const FORM = {
-  mail: 'gfocaneva@gmail.com',
-  password: 'admin'
+  mail: '',
+  password: ''
 }
 
 const ERROR_FORM = {
