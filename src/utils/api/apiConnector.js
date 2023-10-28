@@ -1,9 +1,11 @@
 import axios from "axios";
 import { get } from "lodash";
 
-//const API_URI = "http://localhost:8080";
-const API_URI = "https://service-app-dot-unchainednews.rj.r.appspot.com";
+// URL address for LOCAL solution
+const API_URI = "http://localhost:8080";
+// URL address for CLOUD solution
 //const API_URI = "https://service-app-dot-unchainednews.rj.r.appspot.com";
+
 // axios.interceptors.request.use((request) => {
 //   console.log('Starting Request', JSON.stringify(request, null, 2))
 //   return request
