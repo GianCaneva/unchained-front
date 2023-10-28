@@ -12,12 +12,16 @@ const SessionProvider = ({children}) => {
   
   const userId = get(user, 'id')
 
-//  useEffect(() => {
-//    const user = JSON.parse(localStorage.getItem('user'));
-//    const mail = localStorage.getItem('mail');
-//    setUser(user)
-//    setMail(mail)
-//  }, [])
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const mail = localStorage.getItem('mail');
+    if (user){
+      setUser(user)
+    }
+    if (mail){
+      setMail(mail)
+    }
+  }, [])
 
   const recoverUser = useCallback(
     async () => {
