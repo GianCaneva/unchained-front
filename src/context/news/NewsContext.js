@@ -27,7 +27,7 @@ export const TOPICS = [
     graphLabel: 'DEP'
   },
   {
-    id: "SOCIALS",
+    id: "SOCIAL",
     label: "SOCIALES",
     interestStat: "socialInterest",
     readingTime: "socialTime",
