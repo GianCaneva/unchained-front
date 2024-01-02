@@ -1,5 +1,6 @@
 import fetchApi from "../connector";
 import fetchLoginApi from "../apiConnector";
+import {get} from 'lodash'
 
 export const login = (email, password) =>
   fetchLoginApi("/free/login", { method: "POST", data: { email, password } });
@@ -32,8 +33,12 @@ export const recoverPassword = (code, mail, newPass) =>
     data: { code, mail, newPass },
   });  
 
-export const suscribeNewsletter = (userId) =>
+
+export const suscribeNewsletter = (userId2) =>{
+  const user = JSON.parse(localStorage.getItem('user'));
+  const userId = get(user, 'id')
   fetchApi("/free/user/subscribeNewsletter", { method: "POST", data: {userId} });
+}
 
 export const modifyStats = (stats) =>{
   const {id, politicsInterest, economyInterest, sportsInterest, socialInterest, internationalInterest, policeInterest} = stats
